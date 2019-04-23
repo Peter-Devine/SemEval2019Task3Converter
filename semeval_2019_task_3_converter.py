@@ -24,7 +24,7 @@ if not os.path.exists(OUTPUT_PATH):
 
 for database_type in database_types:
     # Open file
-    original_dataframe = pd.read_csv(database_type+".txt", sep="\t")
+    original_dataframe = pd.read_csv(OUTPUT_PATH + "/" + database_type+".txt", sep="\t")
 
     # Construct the context series
     if CONTEXT_LEVEL > 1:
