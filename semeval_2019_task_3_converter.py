@@ -10,13 +10,11 @@ parser.add_argument('--input', default=".", help='The file path of the unzipped 
 parser.add_argument('--output', default="./data", help='The file path of the output dataset')
 parser.add_argument('--separator', default=r"[TRN]", help='The separator token between context turns')
 parser.add_argument('--turns', default="1", help='The number of previous turns to include in the context')
-parser.add_argument('--speaker_id', default="False", help='Should each line be preceded by the anonymised speaker id')
 args = parser.parse_args()
 INPUT_PATH = args.input
 OUTPUT_PATH = args.output
 SEPARATOR = args.separator
 CONTEXT_LEVEL = int(args.turns)
-SPEAKER_ID = args.speaker_id.upper() == "TRUE"
 
 database_types = ["train", "dev", "test"]
 
